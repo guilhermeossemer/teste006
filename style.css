@@ -72,14 +72,14 @@ p {
   width: calc(33.33% - 40px); /* Define a largura de cada contêiner de produto */
   background-color: #fcf1f9; /* Define a cor de fundo para cada contêiner de produto */
   border-radius: 10px; /* Adiciona bordas arredondadas ao contêiner de produto */
-  padding: 20px; /* Adiciona preenchimento ao redor do conteúdo do produto */
+  padding: 10px; /* Adiciona preenchimento ao redor do conteúdo do produto */
   margin: 10px 0; /* Adiciona margem na parte superior e inferior de cada contêiner de produto */
   text-align: center; /* Alinha o conteúdo do produto ao centro */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao contêiner de produto */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao contêiner de produto */
 }
 
 .product img {
-  width: 240px; /* Define a largura das imagens de produto */
+  width: 340px; /* Define a largura das imagens de produto */
   height: 240px; /* Define a altura das imagens de produto */
   object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner */
   border-radius: 10px; /* Adiciona bordas arredondadas às imagens de produto */
@@ -142,6 +142,9 @@ p {
   height: 100%; /* Ocupa todo o espaço disponível no slide */
   object-fit: cover; /* Redimensiona a imagem mantendo a proporção e preenchendo o espaço */
 }
+footer{
+  text-align: center;
+}
 
 /* Media Query para dispositivos com largura menor que 769px (dispositivos móveis) */
 @media screen and (max-width: 767px) {
@@ -150,10 +153,19 @@ p {
     font-size: 14px; /* Altera o tamanho da fonte para parágrafos em dispositivos móveis */
     margin-bottom: 20px; /* Altera a margem inferior para parágrafos em dispositivos móveis */
   }
+  .buy-button {
+    display: inline-block; /* Exibe o botão como um elemento de bloco inline */
+    padding: 6px 12px; /* Adiciona preenchimento ao redor do conteúdo do botão */
+    background-color: #f8a8e0; /* Define a cor de fundo para o botão */
+    color: #292828; /* Define a cor do texto para o botão */
+    text-decoration: none; /* Remove o sublinhado do texto do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    font-size: 14px;
+  }
 
   .product h3 {
     color: #292828; /* Define a cor do texto para cabeçalhos de produto em dispositivos móveis */
-    font-size: 18px; /* Altera o tamanho da fonte para cabeçalhos de produto em dispositivos móveis */
+    font-size: 15px; /* Altera o tamanho da fonte para cabeçalhos de produto em dispositivos móveis */
   }
 
   .price {
@@ -173,7 +185,7 @@ p {
   }
 
   .product img {
-    width: 110px; /* Define a largura das imagens de produto em dispositivos móveis */
+    width: 150px; /* Define a largura das imagens de produto em dispositivos móveis */
     height: 100px; /* Ajusta a altura das imagens para corresponder ao tamanho das imagens do carrossel em dispositivos móveis */
     object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner em dispositivos móveis */
   }
@@ -194,11 +206,7 @@ p {
   }
   
   header h1 {
-    font-size: 18px; /* Define o tamanho da fonte para o elemento h1 dentro do cabeçalho */
-  }
-  p {
-    font-size: 14px; /* Define o tamanho da fonte para todos os elementos de parágrafo (p) */
-    margin-bottom: 20px; /* Adiciona margem na parte inferior de todos os parágrafos */
+    font-size: 17px; /* Define o tamanho da fonte para o elemento h1 dentro do cabeçalho */
   }
   
   /* Logo */
