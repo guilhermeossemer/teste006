@@ -179,10 +179,8 @@ p {
   }
   .carousel-container {
     width: 400px; /* Define a largura do contêiner de carrossel em dispositivos móveis */
-    height: 120px; /* Define a altura do carrossel em dispositivos móveis */
   }
   .carousel-item img {
-    height: 120px; /* Define a altura das imagens do carrossel em dispositivos móveis */
     object-fit: cover; /* Redimensiona as imagens para preencher todo o espaço disponível no carrossel em dispositivos móveis */
   }
   header {
