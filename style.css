@@ -159,7 +159,9 @@ p {
   object-fit: cover; /* Redimensiona a imagem mantendo a proporção e preenchendo o espaço */
 }
 
-footer{
+footer h1{
+  padding: 15px 10px;
+  font-size: 10px;
   text-align: center;
 }
 
