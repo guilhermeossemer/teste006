@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Baskerville Normal';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Baskerville Normal'), url('fonte/baskvl.woff') format('woff');
+}
+
 /* Estilos globais */
 /* Estilos globais para toda a página */
 body {
@@ -6,32 +13,32 @@ body {
   padding: 0; /* Remove o preenchimento padrão ao redor do corpo (body) */
   background-color: #fde3f7; /* Define a cor de fundo para o corpo (body) */
   font-size: 16px; /* Define o tamanho da fonte padrão para o corpo (body) */
-}
+} 
 
 /* Cabeçalho */
 /* Estilos para a seção de cabeçalho */
 header {
-  background-color: #f8a8e0; /* Define a cor de fundo para o cabeçalho */
-  padding: 5px; /* Adiciona preenchimento ao redor do conteúdo do cabeçalho */
-  text-align: center; /* Alinha o conteúdo do cabeçalho ao centro */
-  color: #1f1e1e; /* Define a cor do texto para o cabeçalho */
-  width: 100%; /* Define a largura do cabeçalho para ocupar 100% de seu contêiner */
-  z-index: 100; /* Define a ordem de empilhamento para o cabeçalho (usado com elementos posicionados) */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao cabeçalho */
+  background-color: #f8a8e0;
+  padding: 10px; /* Aumentei um pouco o preenchimento para desktop */
+  text-align: center;
+  color: #1f1e1e;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 24px; /* Define o tamanho da fonte para o elemento h1 dentro do cabeçalho */
+  font-size: 28px;
+  font-family: 'Baskerville Normal', serif;
 }
 
-/* Logo */
-/* Estilos para a seção de logotipo */
 .logo {
-  margin-bottom: 20px; /* Adiciona margem na parte inferior do elemento com a classe "logo" */
+  margin-bottom: 20px;
 }
 
 .logo img {
-  width: 250px; /* Define a largura da imagem dentro do contêiner do logotipo */
+  width: 250px;
+  height: auto;
 }
 
 /* Títulos */
@@ -45,12 +52,16 @@ h2 {
   color: #292828; /* Define a cor do texto para todos os elementos h2 */
   margin: 0; /* Remove a margem ao redor de todos os elementos h2 */
 }
+h3{
+  font-family: 'Baskerville Normal', serif;
+}
 
 /* Parágrafos */
 /* Estilos para parágrafos (p) */
 p {
-  font-size: 14px; /* Define o tamanho da fonte para todos os elementos de parágrafo (p) */
+  font-size: 20px; /* Define o tamanho da fonte para todos os elementos de parágrafo (p) */
   margin-bottom: 20px; /* Adiciona margem na parte inferior de todos os parágrafos */
+  font-family: 'Baskerville Normal', serif;
 }
 
 /* Botão */
@@ -65,11 +76,15 @@ p {
   display: flex; /* Exibe os produtos como um contêiner flexível */
   flex-wrap: wrap; /* Permite que os produtos sejam agrupados em várias linhas */
   justify-content: space-between; /* Distribui os produtos uniformemente com espaço entre eles */
-  padding: 50px 65px; /* Adiciona preenchimento ao redor do contêiner de produtos */
+  padding: 50px 200px; /* Adiciona preenchimento ao redor do contêiner de produtos */
+}
+#products .product:nth-last-child(-n+2) {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product {
-  width: calc(33.33% - 40px); /* Define a largura de cada contêiner de produto */
+  width: calc(33.33% - 10px); /* Define a largura de cada contêiner de produto */
   background-color: #fcf1f9; /* Define a cor de fundo para cada contêiner de produto */
   border-radius: 10px; /* Adiciona bordas arredondadas ao contêiner de produto */
   padding: 10px; /* Adiciona preenchimento ao redor do conteúdo do produto */
@@ -79,14 +94,15 @@ p {
 }
 
 .product img {
-  width: 340px; /* Define a largura das imagens de produto */
-  height: 240px; /* Define a altura das imagens de produto */
+  width: 300px; /* Define a largura das imagens de produto */
+  height: 200px; /* Define a altura das imagens de produto */
   object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner */
   border-radius: 10px; /* Adiciona bordas arredondadas às imagens de produto */
 }
 
 .product h3 {
   color: #292828; /* Define a cor do texto para os cabeçalhos de produto */
+    
 }
 
 .product p {
@@ -142,17 +158,40 @@ p {
   height: 100%; /* Ocupa todo o espaço disponível no slide */
   object-fit: cover; /* Redimensiona a imagem mantendo a proporção e preenchendo o espaço */
 }
+
 footer{
   text-align: center;
 }
 
 /* Media Query para dispositivos com largura menor que 769px (dispositivos móveis) */
 @media screen and (max-width: 767px) {
+   
+  /* Utilizei um tamanho de fonte maior para facilitar a leitura em dispositivos móveis */
+  header h1 {
+    font-size: 18px;
+  }
+
+  header {
+    background-color: #f8a8e0;
+    padding: 10px; /* Ajustei o preenchimento para dispositivos móveis */
+    text-align: center;
+    color: #1f1e1e;
+    width: 100%;
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Ajustei a margem para dispositivos móveis */
+  }
+
+  .logo img {
+    width: 160px;
+  }
 
   p {
     font-size: 14px; /* Altera o tamanho da fonte para parágrafos em dispositivos móveis */
-    margin-bottom: 20px; /* Altera a margem inferior para parágrafos em dispositivos móveis */
+    margin-bottom: 5px; /* Altera a margem inferior para parágrafos em dispositivos móveis */
   }
+  
   .buy-button {
     display: inline-block; /* Exibe o botão como um elemento de bloco inline */
     padding: 6px 12px; /* Adiciona preenchimento ao redor do conteúdo do botão */
@@ -189,41 +228,12 @@ footer{
     height: 100px; /* Ajusta a altura das imagens para corresponder ao tamanho das imagens do carrossel em dispositivos móveis */
     object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner em dispositivos móveis */
   }
-  .carousel-container {
-    width: 400px; /* Define a largura do contêiner de carrossel em dispositivos móveis */
-  }
-  .carousel-item img {
-    object-fit: cover; /* Redimensiona as imagens para preencher todo o espaço disponível no carrossel em dispositivos móveis */
-  }
-  header {
-    background-color: #f8a8e0; /* Define a cor de fundo para o cabeçalho */
-    padding: 5px; /* Adiciona preenchimento ao redor do conteúdo do cabeçalho */
-    text-align: center; /* Alinha o conteúdo do cabeçalho ao centro */
-    color: #1f1e1e; /* Define a cor do texto para o cabeçalho */
-    width: 100%; /* Define a largura do cabeçalho para ocupar 100% de seu contêiner */
-    z-index: 100; /* Define a ordem de empilhamento para o cabeçalho (usado com elementos posicionados) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao cabeçalho */
-  }
-  
-  header h1 {
-    font-size: 17px; /* Define o tamanho da fonte para o elemento h1 dentro do cabeçalho */
-  }
-  
-  /* Logo */
-  /* Estilos para a seção de logotipo */
-  .logo {
-    margin-bottom: 20px; /* Adiciona margem na parte inferior do elemento com a classe "logo" */
-  }
-  
-  .logo img {
-    width: 150px; /* Define a largura da imagem dentro do contêiner do logotipo */
-  }
   
 
-  /* Estilo específico para desktops */
-@media (min-width: 768px) {
-  .carousel-container {
-    height: 500px; /* Define a altura do carrossel em desktops */
+  /* Estilos específicos para desktops */
+  @media (min-width: 768px) {
+    .carousel-container {
+      height: 500px; /* Define a altura do carrossel em desktops */
+    }
   }
-}
 }
