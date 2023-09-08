@@ -27,6 +27,7 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 header h1 {
   font-size: 28px;
   font-family: 'Baskerville Normal', serif;
@@ -76,7 +77,7 @@ p {
   display: flex; /* Exibe os produtos como um contêiner flexível */
   flex-wrap: wrap; /* Permite que os produtos sejam agrupados em várias linhas */
   justify-content: space-between; /* Distribui os produtos uniformemente com espaço entre eles */
-  padding: 50px 200px; /* Adiciona preenchimento ao redor do contêiner de produtos */
+  padding: 50px 150px; /* Adiciona preenchimento ao redor do contêiner de produtos */
 }
 #products .product:nth-last-child(-n+2) {
   margin-left: auto;
@@ -138,15 +139,18 @@ p {
 /* Carrossel */
 /* Estilos para a seção de carrossel */
 .carousel-container {
-  overflow: hidden; /* Oculta o conteúdo que ultrapassa o contêiner de carrossel */
+  overflow: hidden;
 }
+
 .carousel-inner {
-  position: relative; /* Define o posicionamento dos slides */
-  width: 100%; /* Garante que o conteúdo se encaixe no contêiner */
+  padding: 10px;
+  width: 100%; /* Defina a largura para 100% para ocupar toda a largura da tela */
+  margin: 0; /* Remova as margens para ocupar toda a largura */
 }
 
 .carousel-item {
-  display: none; /* Esconde todos os slides */
+  display: none; /* Inicialmente, oculte todos os slides */
+  position: relative;
 }
 
 .carousel-item.active {
@@ -154,16 +158,158 @@ p {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 100%; /* Ocupa todo o espaço disponível no slide */
-  object-fit: cover; /* Redimensiona a imagem mantendo a proporção e preenchendo o espaço */
+  max-width: 100%; /* Defina a largura máxima para 100% para que a imagem se ajuste à largura da tela */
+  height: auto; /* Deixe a altura ajustar automaticamente para manter a proporção */
+  object-fit: cover;
+  border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+.product-container {
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-images {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-images > * {
+  margin: auto;
+}
+.product-images img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.product-info {
+  flex: 1;
+  padding: 20px;
+}
+.product-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.product-price {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.product-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+
 
 footer h1{
   padding: 15px 10px;
   font-size: 10px;
   text-align: center;
 }
+
+/*-------------------------------------*/
+/* Define a classe para o contêiner que contém os detalhes do produto */
+.product-details {
+  display: flex; /* Aplica um layout flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 50px 550px; /* Ajuste o preenchimento conforme necessário */
+}
+
+/* Define a classe para o elemento que contém a imagem principal do produto */
+.product-image {
+  flex: 1; /* O elemento flexível ocupará espaço disponível */
+  text-align: center; /* Centraliza o conteúdo de texto horizontalmente */
+}
+
+/* Define a classe para a imagem principal do produto */
+.main-image {
+  width: 400px; /* Largura da imagem */
+  height: 400px; /* Altura da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+  border-radius: 10px; /* Borda arredondada */
+}
+/* Adicione estilos para o contêiner com fundo branco */
+.carousel-container-Pagina1 {
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 626px;
+  height: 600px;
+}
+#carouselExamplePagina1 {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-inner-pagina1 {
+  display: flex; /* Torna os slides flexíveis */
+}
+.carousel-item {
+  flex: 0 0 100%; /* Impede que os slides ocupem a largura total */
+}
+.carousel-inner-pagina1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thumbnail-pagina1 {
+  width: 100px;
+  height: 70px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.thumbnail-pagina1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-container-pagina1 {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgba(230, 222, 222, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Adicione estilos para a seção à direita */
+.right-section {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto; /* Espaço entre o carrossel e a seção à direita */
+}
+
+
+
 
 /* Media Query para dispositivos com largura menor que 769px (dispositivos móveis) */
 @media screen and (max-width: 767px) {
@@ -230,6 +376,14 @@ footer h1{
     height: 100px; /* Ajusta a altura das imagens para corresponder ao tamanho das imagens do carrossel em dispositivos móveis */
     object-fit: cover; /* Redimensiona as imagens de produto para cobrir todo o contêiner em dispositivos móveis */
   }
+  .right-section {
+    margin-left: 0; /* Remova a margem à esquerda em dispositivos móveis */
+    max-width: 90%;
+  }
+  .carousel-container-Pagina1 {
+    max-height: 350px;
+}
+  
   
 
   /* Estilos específicos para desktops */
